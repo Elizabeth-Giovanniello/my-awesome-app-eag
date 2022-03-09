@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  web:
+    container_name: my-awesome-web-dev
+    build:
+      context: ./
+      dockerfile: ./Dockerfile-dev
+    ports:
+      - '3001:3000'
+    volumes:
+      - ./:/app
+      - ./node_modules:/app/node_modules
+  
+  test:
+    container_name: my-awesome-web-test
+    build:
+      context: ./
+      dockerfile: ./Dockerfile-dev
+    volumes:
+      - ./:/app
+      - ./node_modules/:app/node_modules
+    command: [ "npm", "test" ]
