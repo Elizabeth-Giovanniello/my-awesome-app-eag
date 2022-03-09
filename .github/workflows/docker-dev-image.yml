@@ -20,7 +20,7 @@ jobs:
       - name: Env variables
         run: echo "date-stamp=${{env.DATE_STAMP}}" >> $GITHUB_ENV
 
-      - name: Run Docker compose on Dev files
+      - name: Build Docker image
         run: docker build . --file Dockerfile-dev --tag eagiov89/my-awesome-web-dev:latest
 
       - name: Add "date-stamp" tag to the image
