@@ -38,7 +38,7 @@ jobs:
           echo
           mvn -v
           echo
-          gradlew --version
+          gradle --version
           echo
           ant -version
           echo
