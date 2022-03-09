@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY package*.json ./
 RUN npm install
-RUN npm install react-scripts@4.0.3 -g
 
 COPY . ./
 
@@ -12,4 +11,4 @@ EXPOSE 8080
 
 ENV CHOKIDAR_USEPOLLING=true
 
-CMD ["node", "app.js"]
+CMD ["node", "App.js"]
