@@ -21,7 +21,7 @@ jobs:
         run: echo "date-stamp=${{env.DATE_STAMP}}" >> $GITHUB_ENV
 
       - name: Run Docker compose on Dev files
-        run: docker-compose -f "docker-compose-dev.yml" up -d --build test
+        run: docker build . --file Dockerfile-dev --tag eagiov89/my-awesome-web-dev:latest
       
       
 
